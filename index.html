@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riko Riko - Comida Rápida Deliciosa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <div class="logo-container">
+                        <div class="logo-text">
+                            <span class="riko-nav riko-nav-1">Riko</span>
+                            <span class="riko-nav riko-nav-2">Riko</span>
+                        </div>
+                        <div class="logo-subtitle-nav">FAST FOOD CART</div>
+                    </div>
+                </div>
+                
+                <!-- Hamburger Menu Button -->
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#sobre-nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <div class="logo-text">
+                    <span class="riko riko-1">Riko</span>
+                    <span class="riko riko-2">Riko</span>
+                </div>
+                <div class="logo-icon-hero">🍟</div>
+                <div class="logo-subtitle-hero">FAST FOOD CART</div>
+            </div>
+            <h2>Bienvenido a Riko Riko</h2>
+            <p>La mejor comida rápida de la ciudad</p>
+            <button class="btn-primary" onclick="scrollToMenu()">Ver Menú</button>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestra Carta</h2>
+                <button class="btn-download" onclick="downloadMenu()">
+                    📥 Descargar Menú (PDF)
+                </button>
+            </div>
+
+            <!-- Menu Content -->
+            <div id="menu-content">
+                <!-- Completos -->
+                <div class="menu-category">
+                    <h3> 🌭 Completos</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Completo Chico</h4>
+                                <p>Hot dog con todos los ingredientes clásicos</p>
+                            </div>
+                            <span class="price">$1.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Completo Mediano</h4>
+                                <p>Hot dog mediano con todos los ingredientes</p>
+                            </div>
+                            <span class="price">$2.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Completo Grande</h4>
+                                <p>Hot dog grande con todos los ingredientes</p>
+                            </div>
+                            <span class="price">$3.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sándwiches -->
+                <div class="menu-category">
+                    <h3>🍔 Sándwiches</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Ave Mayo Personal</h4>
+                                <p>Pollo con mayonesa casera</p>
+                            </div>
+                            <span class="price">$4.500</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Churrasco Personal</h4>
+                                <p>Carne a la plancha con tomate y mayonesa</p>
+                            </div>
+                            <span class="price">$4.500</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Hallullon Italiano</h4>
+                                <p>Jamón, queso y salsa italiana en pan hallulla</p>
+                            </div>
+                            <span class="price">$13.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Barros Luco</h4>
+                                <p>Carne y queso derretido</p>
+                            </div>
+                            <span class="price">$15.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chorrillanas -->
+                <div class="menu-category">
+                    <h3> 🍟 Chorrillanas</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Chorrillana L (3 personas)</h4>
+                                <p>Papas fritas, carne, huevos y cebolla</p>
+                            </div>
+                            <span class="price">$12.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Chorrillana XL</h4>
+                                <p>Papas fritas, carne, huevos y cebolla (extra grande)</p>
+                            </div>
+                            <span class="price">$18.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Empanadas -->
+                <div class="menu-category">
+                    <h3>🥟 Empanadas</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Empanada de Queso</h4>
+                                <p>Queso derretido en masa frita</p>
+                            </div>
+                            <span class="price">$1.400</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Empanada de Jamón y Queso</h4>
+                                <p>Jamón y queso en masa frita</p>
+                            </div>
+                            <span class="price">$1.600</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Empanada Napolitana</h4>
+                                <p>Jamón, queso, tomate y orégano</p>
+                            </div>
+                            <span class="price">$1.800</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Empanada de Pollo y Queso</h4>
+                                <p>Pollo y queso en masa frita</p>
+                            </div>
+                            <span class="price">$2.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Papas Fritas -->
+                <div class="menu-category">
+                    <h3>🍟 Papas Fritas</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Papas Fritas Chica</h4>
+                                <p>Porción individual de papas fritas crujientes</p>
+                            </div>
+                            <span class="price">$2.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Papas Fritas Mediana</h4>
+                                <p>Porción mediana de papas fritas</p>
+                            </div>
+                            <span class="price">$3.500</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Papas Fritas Grande</h4>
+                                <p>Porción grande para compartir</p>
+                            </div>
+                            <span class="price">$5.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bebidas -->
+                <div class="menu-category">
+                    <h3>🥤 Bebidas</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Refresco</h4>
+                                <p>Coca-Cola, Sprite, Fanta (500ml)</p>
+                            </div>
+                            <span class="price">$1.500</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Agua Mineral</h4>
+                                <p>Agua mineral (500ml)</p>
+                            </div>
+                            <span class="price">$1.000</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4>Jugo Natural</h4>
+                                <p>Jugo natural del día</p>
+                            </div>
+                            <span class="price">$2.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-nosotros" class="about-section">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <p>En Riko Riko, nos apasiona servir la mejor comida rápida con ingredientes frescos y de calidad. Desde 2020, hemos estado deleitando a nuestros clientes con sabores únicos y un servicio excepcional.</p>
+            <div class="features">
+                <div class="feature">
+                    <span class="icon">⚡</span>
+                    <h4>Servicio Rápido</h4>
+                    <p>Tu comida lista en minutos</p>
+                </div>
+                <div class="feature">
+                    <span class="icon">🌟</span>
+                    <h4>Calidad Premium</h4>
+                    <p>Ingredientes frescos diariamente</p>
+                </div>
+                <div class="feature">
+                    <span class="icon">💝</span>
+                    <h4>Hecho con Amor</h4>
+                    <p>Cada plato preparado con dedicación</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="icon">📍</span>
+                    <h4>Dirección</h4>
+                    <p>El vergel alto 1936, Valparaíso</p>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">💬</span>
+                    <h4>Teléfono / WhatsApp</h4>
+                    <p><a href="https://wa.me/56946876119" target="_blank" class="whatsapp-link">
+                        <img src="https://img.icons8.com/?size=100&id=BkugfgmBwtEI&format=png&color=000000" alt="WhatsApp" class="whatsapp-icon-img"> +56 9 4687 6119
+                    </a></p>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">⏰</span>
+                    <h4>Horario</h4>
+                    <p>Mar - Jue: 10:00 AM - 10:00 PM<br>
+                    Vie - Sáb: 17:00 PM - 2:00 AM<br>
+                    Domingo: 17:00 PM - 22:00 PM<br>
+                    <strong>Lunes: Cerrado</strong></p>
+                </div>
+            </div>
+            
+            <!-- Google Maps -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps?q=W9HQ%2BH8+Alto+del+Puerto,+Valparaíso&output=embed"
+                    width="100%" 
+                    height="400" 
+                    style="border:0; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Riko Riko</h3>
+                    <p>La mejor comida rápida de Valparaíso desde 2020</p>
+                    <div class="footer-logo">🍔🍟</div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contáctanos</h4>
+                    <p>📍 El vergel alto 1936, Valparaíso</p>
+                    <p>📱 <a href="https://wa.me/56946876119" target="_blank">+56 9 4687 6119</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Horarios</h4>
+                    <p>Mar - Jue: 10:00 AM - 10:00 PM</p>
+                    <p>Vie - Sáb: 5:00 PM - 2:00 AM</p>
+                    <p>Dom: 5:00 PM - 10:00 PM</p>
+                    <p><strong>Lunes: Cerrado</strong></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links-footer">
+                        <a href="https://www.instagram.com/riko.clacruz/" target="_blank" rel="noopener noreferrer" class="social-btn instagram">
+                            <span>📷</span> Instagram
+                        </a>
+                        <a href="https://www.facebook.com/riko.riko.cerro.cruz" target="_blank" rel="noopener noreferrer" class="social-btn facebook">
+                            <span>👍</span> Facebook
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Riko Riko. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
