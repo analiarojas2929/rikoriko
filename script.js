@@ -222,10 +222,10 @@ function generatePDF(button, originalText) {
         const titleElement = document.createElement('h2');
         titleElement.innerHTML = `${categoryIcon} ${categoryTitle} ${categoryIcon}`;
         titleElement.style.color = '#FFC107';
-        titleElement.style.fontSize = '22px';
+        titleElement.style.fontSize = '26px';
         titleElement.style.marginTop = '0';
-        titleElement.style.marginBottom = '14px';
-        titleElement.style.paddingBottom = '10px';
+        titleElement.style.marginBottom = '16px';
+        titleElement.style.paddingBottom = '12px';
         titleElement.style.background = 'linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.2), transparent)';
         titleElement.style.borderBottom = '2px solid #FF6B35';
         titleElement.style.textShadow = '2px 2px 4px rgba(0,0,0,0.9)';
@@ -233,7 +233,7 @@ function generatePDF(button, originalText) {
         titleElement.style.letterSpacing = '1px';
         titleElement.style.textAlign = 'center';
         titleElement.style.borderRadius = '6px';
-        titleElement.style.padding = '8px';
+        titleElement.style.padding = '10px';
         categoryDiv.appendChild(titleElement);
         
         // Items de la categoría
@@ -279,10 +279,10 @@ function generatePDF(button, originalText) {
             const itemPrice = item.querySelector('.price').textContent;
             
             const nameElement = document.createElement('div');
-            nameElement.innerHTML = `<span style="font-size: 14px; margin-right: 6px;">🔸</span>${itemName}`;
+            nameElement.innerHTML = `<span style="font-size: 16px; margin-right: 6px;">🔸</span>${itemName}`;
             nameElement.style.fontWeight = 'bold';
             nameElement.style.color = '#ffffff';
-            nameElement.style.fontSize = '16px';
+            nameElement.style.fontSize = '18px';
             nameElement.style.marginBottom = '6px';
             nameElement.style.textShadow = '1px 1px 3px rgba(0,0,0,0.8)';
             itemInfo.appendChild(nameElement);
@@ -290,25 +290,25 @@ function generatePDF(button, originalText) {
             const descElement = document.createElement('div');
             descElement.textContent = itemDesc;
             descElement.style.color = '#cccccc';
-            descElement.style.fontSize = '13px';
+            descElement.style.fontSize = '15px';
             descElement.style.lineHeight = '1.4';
             descElement.style.fontStyle = 'italic';
-            descElement.style.padding = '4px 0 4px 20px';
+            descElement.style.padding = '4px 0 4px 22px';
             itemInfo.appendChild(descElement);
             
             const priceElement = document.createElement('div');
             priceElement.textContent = itemPrice;
             priceElement.style.fontWeight = '900';
             priceElement.style.color = '#ffffff';
-            priceElement.style.fontSize = '18px';
+            priceElement.style.fontSize = '20px';
             priceElement.style.background = 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FFC107 100%)';
-            priceElement.style.padding = '10px 18px';
+            priceElement.style.padding = '12px 20px';
             priceElement.style.borderRadius = '10px';
             priceElement.style.border = '3px solid #000';
             priceElement.style.whiteSpace = 'nowrap';
             priceElement.style.textShadow = '1px 1px 3px rgba(0,0,0,0.9)';
             priceElement.style.boxShadow = '0 3px 10px rgba(0,0,0,0.4)';
-            priceElement.style.minWidth = '90px';
+            priceElement.style.minWidth = '100px';
             priceElement.style.textAlign = 'center';
             priceElement.style.position = 'relative';
             priceElement.style.zIndex = '1';
@@ -322,104 +322,86 @@ function generatePDF(button, originalText) {
         pdfContainer.appendChild(categoryDiv);
     });
     
-    // Footer mejorado (compacto para que quepa completo)
+    // Footer con tamaños más grandes
     const footer = document.createElement('div');
     footer.style.marginTop = '20px';
-    footer.style.paddingTop = '15px';
     footer.style.background = 'linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%)';
     footer.style.textAlign = 'center';
-    footer.style.padding = '15px';
+    footer.style.padding = '18px';
     footer.style.borderRadius = '12px';
     footer.style.border = '3px solid #FF6B35';
     footer.style.boxShadow = '0 5px 15px rgba(255, 107, 53, 0.4)';
     footer.style.pageBreakInside = 'avoid';
     footer.style.breakInside = 'avoid';
     
-    // Decoración de horario
-    const scheduleDecor = document.createElement('div');
-    scheduleDecor.innerHTML = '⏰ ⏰ ⏰';
-    scheduleDecor.style.fontSize = '16px';
-    scheduleDecor.style.marginBottom = '10px';
-    scheduleDecor.style.letterSpacing = '12px';
-    footer.appendChild(scheduleDecor);
-    
+    // Título de horario
     const scheduleTitle = document.createElement('h3');
-    scheduleTitle.textContent = 'HORARIO DE ATENCIÓN';
+    scheduleTitle.textContent = '⏰ HORARIO DE ATENCIÓN';
     scheduleTitle.style.color = '#FFC107';
     scheduleTitle.style.marginTop = '0';
     scheduleTitle.style.marginBottom = '12px';
-    scheduleTitle.style.fontSize = '20px';
+    scheduleTitle.style.fontSize = '22px';
     scheduleTitle.style.textShadow = '2px 2px 4px rgba(0,0,0,0.9)';
     scheduleTitle.style.fontWeight = '900';
-    scheduleTitle.style.letterSpacing = '1px';
     footer.appendChild(scheduleTitle);
     
-    // Contenedor de horarios con diseño mejorado
+    // Contenedor de horarios con tamaños más grandes
     const scheduleContainer = document.createElement('div');
     scheduleContainer.style.background = 'rgba(255, 107, 53, 0.1)';
-    scheduleContainer.style.padding = '12px';
+    scheduleContainer.style.padding = '15px';
     scheduleContainer.style.borderRadius = '10px';
     scheduleContainer.style.border = '2px solid rgba(255, 193, 7, 0.3)';
-    scheduleContainer.style.marginBottom = '12px';
+    scheduleContainer.style.marginBottom = '15px';
     scheduleContainer.innerHTML = `
-        <div style="display: flex; align-items: center; justify-content: center; margin: 6px 0; padding: 6px; background: rgba(0,0,0,0.2); border-radius: 5px;">
-            <span style="color: #FFC107; font-weight: bold; font-size: 13px; min-width: 150px; text-align: right; margin-right: 10px;">📅 Martes a Jueves:</span>
-            <span style="color: #ffffff; font-size: 13px; font-weight: bold;">10:00 AM - 10:00 PM</span>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: center; margin: 6px 0; padding: 6px; background: rgba(0,0,0,0.2); border-radius: 5px;">
-            <span style="color: #FFC107; font-weight: bold; font-size: 13px; min-width: 150px; text-align: right; margin-right: 10px;">🎉 Viernes y Sábado:</span>
-            <span style="color: #ffffff; font-size: 13px; font-weight: bold;">5:00 PM - 2:00 AM</span>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: center; margin: 6px 0; padding: 6px; background: rgba(0,0,0,0.2); border-radius: 5px;">
-            <span style="color: #FFC107; font-weight: bold; font-size: 13px; min-width: 150px; text-align: right; margin-right: 10px;">☀️ Domingo:</span>
-            <span style="color: #ffffff; font-size: 13px; font-weight: bold;">5:00 PM - 10:00 PM</span>
-        </div>
+        <p style="margin: 8px 0; color: #ffffff; font-size: 15px; font-weight: bold;">
+            📅 Martes a Jueves: 10:00 AM - 10:00 PM
+        </p>
+        <p style="margin: 8px 0; color: #ffffff; font-size: 15px; font-weight: bold;">
+            🎉 Viernes y Sábado: 5:00 PM - 2:00 AM
+        </p>
+        <p style="margin: 8px 0; color: #ffffff; font-size: 15px; font-weight: bold;">
+            ☀️ Domingo: 5:00 PM - 10:00 PM
+        </p>
+        <p style="margin: 12px 0 8px 0; color: #FF6B35; font-size: 16px; font-weight: 900; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">
+            🚫 Lunes: CERRADO
+        </p>
     `;
     footer.appendChild(scheduleContainer);
     
-    // Día cerrado con énfasis
-    const closedDay = document.createElement('div');
-    closedDay.style.background = 'linear-gradient(135deg, #FF6B35, #F7931E)';
-    closedDay.style.padding = '10px 20px';
-    closedDay.style.borderRadius = '8px';
-    closedDay.style.border = '3px solid #000';
-    closedDay.style.margin = '12px auto';
-    closedDay.style.maxWidth = '250px';
-    closedDay.style.boxShadow = '0 3px 10px rgba(0,0,0,0.5)';
-    closedDay.innerHTML = '<p style="margin: 0; color: #ffffff; font-size: 15px; font-weight: 900; text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">🚫 Lunes: CERRADO</p>';
-    footer.appendChild(closedDay);
-    
-    // Separador decorativo
+    // Separador
     const separator = document.createElement('div');
     separator.style.height = '2px';
-    separator.style.background = 'linear-gradient(90deg, transparent, #FF6B35, #FFC107, #FF6B35, transparent)';
-    separator.style.margin = '12px 0';
-    separator.style.borderRadius = '2px';
+    separator.style.background = '#FF6B35';
+    separator.style.margin = '15px 0';
     footer.appendChild(separator);
     
-    // Mensaje de agradecimiento
-    const thankYou = document.createElement('div');
-    thankYou.style.background = 'rgba(255, 193, 7, 0.1)';
-    thankYou.style.padding = '12px';
-    thankYou.style.borderRadius = '8px';
-    thankYou.style.marginBottom = '12px';
-    thankYou.innerHTML = `
-        <p style="margin: 0; color: #FFC107; font-size: 14px; font-weight: bold; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); font-style: italic;">
-            "¡Gracias por preferirnos!" 🙏
+    // Redes sociales con tamaños más grandes
+    const socialMedia = document.createElement('div');
+    socialMedia.style.background = 'rgba(255, 193, 7, 0.1)';
+    socialMedia.style.padding = '15px';
+    socialMedia.style.borderRadius = '10px';
+    socialMedia.style.marginBottom = '15px';
+    socialMedia.innerHTML = `
+        <p style="margin: 0 0 10px 0; color: #FFC107; font-size: 16px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">
+            📱 Síguenos en Redes Sociales
         </p>
-        <p style="margin: 6px 0 0 0; color: #ffffff; font-size: 11px;">
-            Síguenos en redes sociales
+        <p style="margin: 6px 0; color: #E4405F; font-size: 14px; font-weight: bold;">
+            📷 Instagram: @riko.clacruz
+        </p>
+        <p style="margin: 6px 0; color: #4267B2; font-size: 14px; font-weight: bold;">
+            👍 Facebook: riko.riko.cerro.cruz
+        </p>
+        <p style="margin: 6px 0; color: #25D366; font-size: 14px; font-weight: bold;">
+            💬 WhatsApp: +56 9 4687 6119
         </p>
     `;
-    footer.appendChild(thankYou);
+    footer.appendChild(socialMedia);
     
-    // Copyright y pie de página
+    // Copyright
     const copyright = document.createElement('p');
-    copyright.style.marginTop = '12px';
+    copyright.style.margin = '10px 0 0 0';
     copyright.style.color = '#999';
-    copyright.style.fontSize = '11px';
-    copyright.style.borderTop = '1px solid #444';
-    copyright.style.paddingTop = '10px';
+    copyright.style.fontSize = '12px';
     copyright.style.fontWeight = 'bold';
     copyright.textContent = '© 2025 Riko Riko - Todos los derechos reservados';
     footer.appendChild(copyright);
