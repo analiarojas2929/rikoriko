@@ -48,6 +48,94 @@ function scrollToMenu() {
     });
 }
 
+// ========== CARRUSEL DE GALERÍA ==========
+let currentSlide = 0;
+const totalSlides = 7; // Número total de imágenes en la galería
+
+// Inicializar carrusel cuando se carga la página
+document.addEventListener('DOMContentLoaded', function() {
+    initCarousel();
+    // Auto-play del carrusel cada 5 segundos
+    setInterval(() => {
+        moveCarousel(1);
+    }, 5000);
+});
+
+function initCarousel() {
+    const dotsContainer = document.getElementById('carouselDots');
+    if (!dotsContainer) return;
+    
+    // Crear los puntos indicadores
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'dot';
+        if (i === 0) dot.classList.add('active');
+        dot.onclick = () => goToSlide(i);
+        dotsContainer.appendChild(dot);
+    }
+}
+
+function moveCarousel(direction) {
+    currentSlide += direction;
+    
+    // Loop infinito
+    if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+    } else if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+    }
+    
+    updateCarousel();
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    updateCarousel();
+}
+
+function updateCarousel() {
+    const track = document.querySelector('.carousel-track');
+    const dots = document.querySelectorAll('.dot');
+    
+    if (!track) return;
+    
+    // Mover el carrusel
+    const offset = -currentSlide * 100;
+    track.style.transform = `translateX(${offset}%)`;
+    
+    // Actualizar dots
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+    });
+}
+
+// Soporte para gestos táctiles (swipe) en móviles
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.carousel-wrapper');
+    if (!carousel) return;
+    
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+});
+
+function handleSwipe() {
+    if (touchEndX < touchStartX - 50) {
+        moveCarousel(1); // Swipe izquierda
+    }
+    if (touchEndX > touchStartX + 50) {
+        moveCarousel(-1); // Swipe derecha
+    }
+}
+
 // Función para descargar el menú como PDF
 function downloadMenu() {
     // Crear un elemento temporal para mostrar mensaje
