@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const addBtn = document.createElement('button');
         addBtn.className   = 'btn-agregar';
-        addBtn.textContent = '+ Agregar al pedido';
+        addBtn.textContent = '+ Agregar';
         addBtn.onclick = () => addItem(id, name, price, item);
 
         const qtyCtrl = document.createElement('div');
@@ -176,7 +176,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         wrapper.appendChild(addBtn);
         wrapper.appendChild(qtyCtrl);
-        item.appendChild(wrapper);
+        // Insertar entre el price y el final, junto al precio
+        const priceElRef = item.querySelector('.price');
+        if (priceElRef) {
+            priceElRef.style.flexShrink = '0';
+            item.insertBefore(wrapper, priceElRef.nextSibling);
+        } else {
+            item.appendChild(wrapper);
+        }
     });
 });
 
