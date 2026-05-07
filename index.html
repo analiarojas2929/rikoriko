@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riko Riko - Comida Rápida Deliciosa</title>
-    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png">
+    <link rel="shortcut icon" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -15,13 +18,9 @@
         <nav class="navbar">
             <div class="container">
                 <div class="logo">
-                    <div class="logo-container">
-                        <div class="logo-text">
-                            <span class="riko-nav riko-nav-1">Riko</span>
-                            <span class="riko-nav riko-nav-2">Riko</span>
-                        </div>
-                        <div class="logo-subtitle-nav">FAST FOOD CART</div>
-                    </div>
+                    <a href="#inicio" class="logo-link">
+                        <img src="assets/logo.png" alt="El Riko Riko - Sabor y Amor" class="logo-img-nav">
+                    </a>
                 </div>
 
                 <!-- Hamburger Menu Button -->
@@ -34,6 +33,7 @@
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#menu">Menú</a></li>
+                    <li><a href="#hamburguesas">Hamburguesas</a></li>
                     <li><a href="#galeria">Galería</a></li>
                     <li><a href="#sobre-nosotros">Nosotros</a></li>
                     <li><a href="#contacto">Contacto</a></li>
@@ -46,16 +46,17 @@
     <section id="inicio" class="hero">
         <div class="hero-content">
             <div class="hero-logo">
-                <div class="logo-text">
-                    <span class="riko riko-1">Riko</span>
-                    <span class="riko riko-2">Riko</span>
-                </div>
-                <div class="logo-icon-hero">🍟</div>
-                <div class="logo-subtitle-hero">FAST FOOD CART</div>
+                <img src="assets/logo.png" alt="El Riko Riko - Sabor y Amor" class="hero-logo-img">
             </div>
-            <h2>Bienvenido a Riko Riko</h2>
-            <p>La mejor comida rápida de Valparaiso</p>
-            <button class="btn-primary" onclick="scrollToMenu()">Ver Menú</button>
+            <h2>Bienvenido a El Riko Riko</h2>
+            <p>Sabor y Amor desde Valparaíso</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToMenu()">Ver Menú</button>
+                <a href="https://wa.me/56946876119" target="_blank" class="btn-whatsapp">
+                    <img src="https://img.icons8.com/?size=100&id=BkugfgmBwtEI&format=png&color=000000" alt="WhatsApp" class="whatsapp-icon-btn"> 
+                    Haz tu Pedido Aquí
+                </a>
+            </div>
         </div>
     </section>
 
@@ -82,7 +83,7 @@
                                 <p>Italiano clásico: palta, tomate y mayo casera.</p>
                                 <p>"Completo" con chucrut o salsa americana, a elección.</p>
                             </div>
-                            <span class="price">$1.000</span>
+                            <span class="price">$1.500</span>
                         </div>
 
                         <div class="menu-item">
@@ -91,7 +92,7 @@
                                 <p>Italiano bien rellenito (palta fresquita, tomate picado y mayo).</p>
                                 <p>O versión completa con chucrut o salsa americana.</p>
                             </div>
-                            <span class="price">$2.000</span>
+                            <span class="price">$2.500</span>
                         </div>
 
                         <div class="menu-item">
@@ -100,7 +101,7 @@
                                 <p>Italiano XL con más palta y tomate.</p>
                                 <p>También disponible estilo completo con chucrut o salsa americana.</p>
                             </div>
-                            <span class="price">$3.000</span>
+                            <span class="price">$3.800</span>
                         </div>
 
                     </div>
@@ -117,7 +118,7 @@
                                 <h4>Ave Mayo Individual</h4>
                                 <p>Pollito desmenuzado con mayonesa casera bien cremosa.</p>
                             </div>
-                            <span class="price">$4.500</span>
+                            <span class="price">$5.000</span>
                         </div>
 
                         <div class="menu-item">
@@ -125,7 +126,7 @@
                                 <h4>Ave Italiano Individual</h4>
                                 <p>Pollo desmenuzado con palta, tomate y mayo casera.</p>
                             </div>
-                            <span class="price">$4.500</span>
+                            <span class="price">$5.000</span>
                         </div>
 
                         <div class="menu-item">
@@ -133,7 +134,7 @@
                                 <h4>Churrasco Italiano Individual</h4>
                                 <p>Carne a la plancha con palta, tomate y mayo.</p>
                             </div>
-                            <span class="price">$4.500</span>
+                            <span class="price">$5.000</span>
                         </div>
 
                         <div class="menu-item">
@@ -141,7 +142,7 @@
                                 <h4>Barros Luco Individual</h4>
                                 <p>Churrasco con queso derretido.</p>
                             </div>
-                            <span class="price">$4.500</span>
+                            <span class="price">$5.000</span>
                         </div>
 
                         <div class="menu-item">
@@ -149,7 +150,7 @@
                                 <h4>Hallullón Italiano Grande</h4>
                                 <p>Hallulla grande con churrasco, queso y mezcla italiana (palta + tomate + mayo).</p>
                             </div>
-                            <span class="price">$13.000</span>
+                            <span class="price">$14.000</span>
                         </div>
 
                         <div class="menu-item">
@@ -157,7 +158,7 @@
                                 <h4>Hallullón Barros Luco Grande</h4>
                                 <p>Hallulla grande con churrasco y queso derretido.</p>
                             </div>
-                            <span class="price">$15.000</span>
+                            <span class="price">$16.000</span>
                         </div>
 
                         <div class="menu-item">
@@ -165,7 +166,7 @@
                                 <h4>Hallullón Chacarero Grande</h4>
                                 <p>Hallulla grande con churrasco, tomate, porotos verdes y ají verde.</p>
                             </div>
-                            <span class="price">$16.000</span>
+                            <span class="price">$18.000</span>
                         </div>
 
                     </div>
@@ -182,7 +183,7 @@
                                 <h4>Chorrillana Chica</h4>
                                 <p>Papas fritas caseras con carne a la plancha, cebolla salteada y huevos fritos.</p>
                             </div>
-                            <span class="price">$12.000</span>
+                            <span class="price">$13.000</span>
                         </div>
 
                         <div class="menu-item">
@@ -190,7 +191,7 @@
                                 <h4>Chorrillana Grande</h4>
                                 <p>Versión gigante: más papas, más carne, más cebolla y más huevos. Ideal para compartir.</p>
                             </div>
-                            <span class="price">$18.000</span>
+                            <span class="price">$19.000</span>
                         </div>
 
                     </div>
@@ -207,7 +208,7 @@
                                 <h4>Empanada de Queso</h4>
                                 <p>Quesito bien derretido en masa frita crocante.</p>
                             </div>
-                            <span class="price">$1.400</span>
+                            <span class="price">$1.600</span>
                         </div>
 
                         <div class="menu-item">
@@ -215,7 +216,7 @@
                                 <h4>Empanada de Jamón y Queso</h4>
                                 <p>Clásica de picá: jamón y queso calentitos en masa frita.</p>
                             </div>
-                            <span class="price">$1.600</span>
+                            <span class="price">$1.800</span>
                         </div>
 
                         <div class="menu-item">
@@ -223,7 +224,7 @@
                                 <h4>Empanada Napolitana</h4>
                                 <p>Jamón, queso, tomate y orégano al estilo napolitano, frita al momento.</p>
                             </div>
-                            <span class="price">$1.800</span>
+                            <span class="price">$2.000</span>
                         </div>
 
                         <div class="menu-item">
@@ -231,7 +232,7 @@
                                 <h4>Empanada de Pollo y Queso</h4>
                                 <p>Pollito desmenuzado con queso derretido en masa frita doradita.</p>
                             </div>
-                            <span class="price">$2.000</span>
+                            <span class="price">$2.200</span>
                         </div>
 
                     </div>
@@ -247,7 +248,7 @@
                                 <h4>Papas Fritas Chicas</h4>
                                 <p>Porción individual de papas fritas **naturales**, crujientes y recién hechas.</p>
                             </div>
-                            <span class="price">$2.000</span>
+                            <span class="price">$2.500</span>
                         </div>
 
                         <div class="menu-item">
@@ -255,7 +256,7 @@
                                 <h4>Papas Fritas Medianas</h4>
                                 <p>Porción mediana de papas **naturales** doraditas, ideales para acompañar.</p>
                             </div>
-                            <span class="price">$3.500</span>
+                            <span class="price">$4.000</span>
                         </div>
 
                         <div class="menu-item">
@@ -263,7 +264,7 @@
                                 <h4>Papas Fritas Grandes</h4>
                                 <p>Porción grande de papas naturales, perfectas para compartir.</p>
                             </div>
-                            <span class="price">$5.500</span>
+                            <span class="price">$6.000</span>
                         </div>
 
                     </div>
@@ -280,7 +281,7 @@
                                 <h4>Salchipapa Chica</h4>
                                 <p>Papas fritas con trozos de salchicha, aderezos y salsas.</p>
                             </div>
-                            <span class="price">$3.500</span>
+                            <span class="price">$4.000</span>
                         </div>
 
                         <div class="menu-item">
@@ -288,7 +289,7 @@
                                 <h4>Salchipapa Grande</h4>
                                 <p>Porción grande de papas fritas con salchicha, perfecta para compartir.</p>
                             </div>
-                            <span class="price">$5.500</span>
+                            <span class="price">$6.000</span>
                         </div>
 
                     </div>
@@ -328,14 +329,14 @@
                                 <h4>Cocacola express (237 ml)</h4>
                                 <p>Coca-Cola formato individual.</p>
                             </div>
-                            <span class="price">$600</span>
+                            <span class="price">$700</span>
                         </div>
                         <div class="menu-item">
                             <div class="item-info">
                                 <h4>Gaseosa (350 ml)</h4>
                                 <p>Pepsi, Canada drive,Kem , Bilz , Pap, Limon soda Fanta — formato individual.</p>
                             </div>
-                            <span class="price">$1.200</span>
+                            <span class="price">$1.400</span>
                         </div>
 
                         <div class="menu-item">
@@ -343,7 +344,7 @@
                                 <h4>Coca-Cola (591 ml)</h4>
                                 <p>Botella mediana, bien heladita.</p>
                             </div>
-                            <span class="price">$1.600</span>
+                            <span class="price">$1.800</span>
                         </div>
 
                         <div class="menu-item">
@@ -374,6 +375,71 @@
             </div>
     </section>
 
+    <!-- Hamburguesas Section -->
+    <section id="hamburguesas" class="burgers-section">
+        <div class="container">
+            <div class="burgers-header">
+                <h2>🍔 Nuestras Hamburguesas</h2>
+                <p class="burgers-subtitle">Hechas con amor, al carbón de verdad</p>
+            </div>
+            <div class="burgers-grid">
+                <div class="burger-card burger-card--featured">
+                    <img src="assets/imagen1.png" alt="Hamburguesa Clásica Riko Riko">
+                    <div class="burger-card__overlay">
+                        <span class="burger-tag">⭐ La Clásica</span>
+                        <p>Hamburguesa, queso cheddar, lechuga y papas fritas</p>
+                    </div>
+                </div>
+                <div class="burger-card">
+                    <img src="assets/imagen2.png" alt="Hamburguesa Doble Riko Riko">
+                    <div class="burger-card__overlay">
+                        <span class="burger-tag">🔥 La Doble</span>
+                        <p>Doble Hamburguesa, doble queso, cebolla mora</p>
+                    </div>
+                </div>
+                <div class="burger-card">
+                    <img src="assets/imagen3.png" alt="Hamburguesa Especial Riko Riko">
+                    <div class="burger-card__overlay">
+                        <span class="burger-tag">💖 La Especial</span>
+                        <p>Medallón, queso fundido, tocino y mayo</p>
+                    </div>
+                </div>
+                <div class="burger-card">
+                    <img src="assets/imagen4.png" alt="Hamburguesa Riko con palta Riko Riko">
+                    <div class="burger-card__overlay">
+                        <span class="burger-tag">🌟 La Riko</span>
+                        <p>Hamburguesa, palta, cebolla caramelizada y tomate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="burgers-cta">
+                <a href="https://wa.me/56946876119" target="_blank" class="btn-whatsapp">
+                    <img src="https://img.icons8.com/?size=100&id=BkugfgmBwtEI&format=png&color=000000" alt="WhatsApp" class="whatsapp-icon-btn">
+                    Pedir ahora por WhatsApp
+                </a>
+            </div>
+
+            <!-- Ingredientes -->
+            <div class="ingredients-box">
+                <div class="ingredients-title">
+                    <span class="ingredients-badge">ELIGE SOLO 3</span>
+                    <h3>Personaliza tu hamburguesa</h3>
+                    <p>Selecciona hasta <strong>3 ingredientes</strong> extra al hacer tu pedido</p>
+                </div>
+                <div class="ingredients-grid">
+                    <div class="ingredient-chip">🧀 Queso Cheddar</div>
+                    <div class="ingredient-chip">🥓 Tocino</div>
+                    <div class="ingredient-chip">🥒 Pepinillo</div>
+                    <div class="ingredient-chip">🧅 Cebolla Mora</div>
+                    <div class="ingredient-chip">🍯 Cebolla Caramelizada</div>
+                    <div class="ingredient-chip">🥬 Lechuga</div>
+                    <div class="ingredient-chip">🥑 Palta</div>
+                    <div class="ingredient-chip">🍅 Tomate</div>
+                    <div class="ingredient-chip">🥣 Mayo</div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Gallery Section -->
     <section id="galeria" class="gallery-section">
         <div class="container">
@@ -403,7 +469,7 @@
 
                         <!-- Churrasco -->
                         <div class="carousel-item">
-                            <img src="assets/churrasco.jpg" alt="Churrasco Riko Riko">
+                            <img src="assets/churrasco.png" alt="Churrasco Riko Riko">
                             <div class="gallery-overlay">
                                 <p>Churrasco</p>
                             </div>
@@ -454,6 +520,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- About Section -->
     <section id="sobre-nosotros" class="about-section">
@@ -565,6 +632,43 @@
             </div>
         </div>
     </footer>
+
+    <!-- CARRITO FLOTANTE -->
+    <button class="cart-fab" id="cartFab" onclick="toggleCart()" aria-label="Ver pedido">
+        <span class="cart-fab-icon">🛒</span>
+        <span class="cart-fab-count" id="cartCount" style="display:none">0</span>
+    </button>
+
+    <!-- BACKDROP -->
+    <div class="cart-backdrop" id="cartBackdrop" onclick="toggleCart()"></div>
+
+    <!-- DRAWER DEL CARRITO -->
+    <div class="cart-drawer" id="cartDrawer" role="dialog" aria-label="Carrito de pedido">
+        <div class="cart-drawer-header">
+            <div class="cart-drawer-title">
+                <span>🛒</span>
+                <h3>Tu Pedido</h3>
+            </div>
+            <button class="cart-close" onclick="toggleCart()" aria-label="Cerrar">✕</button>
+        </div>
+        <div class="cart-body" id="cartItems">
+            <div class="cart-empty" id="cartEmpty">
+                <span>🍔</span>
+                <p>Agrega productos desde el menú</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-total-row">
+                <span>Total estimado</span>
+                <span class="cart-total-amount" id="cartTotal">$0</span>
+            </div>
+            <a class="cart-send-btn" id="cartSendBtn" href="javascript:void(0)" onclick="sendToWhatsapp()" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/?size=100&id=BkugfgmBwtEI&format=png&color=000000" alt="WhatsApp" style="width:22px;height:22px;display:inline-block">
+                Enviar pedido por WhatsApp
+            </a>
+            <button class="cart-clear-btn" onclick="clearCart()">🗑️ Limpiar pedido</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
